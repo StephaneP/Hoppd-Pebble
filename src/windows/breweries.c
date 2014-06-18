@@ -95,7 +95,7 @@ void breweries_in_received_handler(DictionaryIterator *iter){
 
 		Brewery brewery;
 		brewery.breweryId = index_tuple->value->int16;
-		strncpy(brewery.name, name_tuple->value->cstring, sizeof(brewery.name) - 1);
+		strncpy(brewery.name, name_tuple->value->cstring, sizeof(brewery.name));
 		breweries[brewery.breweryId] = brewery;
 		num_breweries++;
 		menu_layer_reload_data(menu_layer);

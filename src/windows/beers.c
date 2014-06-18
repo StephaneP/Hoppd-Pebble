@@ -95,9 +95,9 @@ void beers_in_received_handler(DictionaryIterator *iter){
 
 		Beer beer;
 		beer.beerId = index_tuple->value->int16;
-		strncpy(beer.name, name_tuple->value->cstring, sizeof(beer.name) - 1);
+		strncpy(beer.name, name_tuple->value->cstring, sizeof(beer.name));
 		beers[beer.beerId] = beer;
-		num_beers++;
+		num_beers++;			
 		menu_layer_reload_data(menu_layer);
 		layer_mark_dirty(menu_layer_get_layer(menu_layer));		
 	} else if(index_tuple) {

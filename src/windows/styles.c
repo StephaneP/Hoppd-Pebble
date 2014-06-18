@@ -95,7 +95,7 @@ void styles_in_received_handler(DictionaryIterator *iter){
 
 		Style style;
 		style.styleId = index_tuple->value->int16;
-		strncpy(style.name, name_tuple->value->cstring, sizeof(style.name) - 1);
+		strncpy(style.name, name_tuple->value->cstring, sizeof(style.name));
 		styles[style.styleId] = style;
 		num_styles++;
 		menu_layer_reload_data(menu_layer);

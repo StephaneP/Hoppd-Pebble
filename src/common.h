@@ -9,8 +9,8 @@
 typedef struct {
 	int beerId;
 	char name[32];
-	char abv[32];
-	char ibu[32];
+	int abv;
+	int ibu;
 } Beer;
 
 typedef struct {
